@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        .markaz
+        {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            transform-style: preserve-3d;
+            animation-name: animation1;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .block
+        {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: black;
+        }
+        #chap
+        {
+            transform-style: preserve-3d;
+            left: -75px;
+            transform: rotateY(-90deg);
+        }
+        #oldi
+        {
+            transform: translateZ(75px);
+        }
+        #ong
+        {
+            transform-style: preserve-3d;
+            left: 75px;
+            transform:rotateY(90deg);
+        }
+        #orqa
+        {
+            transform: translateZ(-75px);
+            z-index: -1
+        }
+        #tepa{
+            top: -75px;
+            transform: rotateX(90deg);
+        }
+        #pas{
+            top: 75px;
+            transform: rotateX(-90deg);
+        }
+
+        .markaz:hover
+        {
+            transform-style: preserve-3d;
+            transform: rotateY(135deg);
+
+        }
+        .block div{
+            width: 32%;
+            height: 32%;
+            border-radius: 5px;
+        }
+        .red
+        {
+            background-color: red;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .green
+        {
+            background-color:green;
+        }
+        .blue
+        {
+            background-color: blue;
+        }
+        .white{
+            background-color: white;
+        }
+        .last
+        {
+            background-color:chartreuse;
+        }
+        @keyframes animation1
+        {
+            0%{transform: rotate3d(1,1,0,0deg);}
+            25%{transform: rotate3d(1,1,0,360deg);}
+            50%{transform: rotate3d(1,1,0,720deg);}
+            75%{transform: rotate3d(1,1,0,1080deg);}
+            100%{transform: rotate3d(1,1,0,1440deg);}
+        }
+    </style>
+</head>
+<body>
+    <div id="bbbb" style="width: 100%; background-color: black;">
+        <div class="markaz">
+            <div class="block" id="chap">
+                <div class="red"></div>
+                <div class="red"></div>
+                <div class="red"></div>
+                <div class="red"></div>
+                <div class="red"></div>
+                <div class="red"></div>
+                <div class="red"></div>
+                <div class="red"></div>
+                <div class="red"></div>
+            </div>
+            <div class="block" id="oldi">
+                <div class="yellow"></div>
+                <div class="yellow"></div>
+                <div class="yellow"></div>
+                <div class="yellow"></div>
+                <div class="yellow"></div>
+                <div class="yellow"></div>
+                <div class="yellow"></div>
+                <div class="yellow"></div>
+                <div class="yellow"></div>
+            </div>
+            <div class="block" id="ong"> 
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="green"></div>
+                <div class="green"></div>
+            </div>
+            <div class="block" id="orqa">
+                <div class="blue"></div>
+                <div class="blue"></div>
+                <div class="blue"></div>
+                <div class="blue"></div>
+                <div class="blue"></div>
+                <div class="blue"></div>
+                <div class="blue"></div>
+                <div class="blue"></div>
+                <div class="blue"></div>
+            </div>
+            <div class="block" id="tepa">
+                <div class="white"></div>
+                <div class="white"></div>
+                <div class="white"></div>
+                <div class="white"></div>
+                <div class="white"></div>
+                <div class="white"></div>
+                <div class="white"></div>
+                <div class="white"></div>
+                <div class="white"></div>
+            </div>
+            <div class="block" id="pas">
+                <div class="last"></div>
+                <div class="last"></div>
+                <div class="last"></div>
+                <div class="last"></div>
+                <div class="last"></div>
+                <div class="last"></div>
+                <div class="last"></div>
+                <div class="last"></div>
+                <div class="last"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script> 
+        document.getElementById("bbbb").style.height=window.outerHeight+"px";
+    </script>
+</body>
+</html>
